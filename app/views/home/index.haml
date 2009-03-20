@@ -4,7 +4,7 @@
       %td Key
       %td Value
   %tbody
-    - session.each do |key, value|
+    - session.keys.sort { |a,b| a.to_s <=> b.to_s }.each do |key|
       %tr
         %td= key
-        %td= value
+        %td= session[key]
