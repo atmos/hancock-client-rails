@@ -1,0 +1,10 @@
+%table
+  %thead
+    %tr
+      %td Key
+      %td Value
+  %tbody
+    - session.each do |key, value|
+      %tr
+        %td= key
+        %td= value

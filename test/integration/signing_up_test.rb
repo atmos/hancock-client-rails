@@ -40,10 +40,10 @@ class SignupTest < ActionController::TestCase
       @browser.text_field(:name, :password_confirmation).set(password)
       @browser.button(:value, 'Am I Done Yet?').click
 
-      sleep 2
+      sleep 1
 
       # sent back to be greeted on the consumer
-      assert_match %r!Welcome to the Hancock Rails Client!, @browser.html
+      assert_have_selector "h1:contains('Hancock Client: Rails')"
       assert_have_selector "td:contains('#{email}')"
       assert_have_selector "td:contains('#{first_name}')"
       assert_have_selector "td:contains('#{last_name}')"

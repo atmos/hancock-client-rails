@@ -1,0 +1,38 @@
+%html{:xmlns=> "http://www.w3.org/1999/xhtml", 'xml:lang' => "en", :lang => "en"}
+  %head
+    %meta{'http-equiv' => "Content-Type", 'content' => "text/html; charset=utf-8"}
+    %meta{'name' => "description", 'content' => "Hancock Single Sign On Server"}
+    %meta{'name' => "author", 'content' => "Corey Donohoe  / Original design: Andreas Viklund - http://andreasviklund.com/"}
+    %link{'rel' => 'stylesheet', 'type' => 'text/css',  'href' => '/stylesheets/andreas05.css'} 
+    %title Step Right Up
+  %body
+    #title
+      %h1 Hancock Client: Rails
+    #container
+      #sidebar
+        %h2 Interact
+        - if session[:user_id]
+          %a{:class => 'menu', :href => '/sso/logout'} Logout
+        - else
+          %a{:class => 'menu', :href => '/sso/login'} Login
+        %a{:class => 'menu', :href => 'http://github.com/atmos/hancock_client'} GitHub
+        %a{:class => 'menu', :href => 'http://wiki.github.com/atmos/hancock_client'} Wiki
+
+        %h2 Thank You
+        %a{:class => 'menu', :href => 'http://sinatrarb.com'} Sinatra
+        %a{:class => 'menu', :href => 'http://engineyard.com'} Engine Yard
+        %a{:class => 'menu', :href => 'http://andreasviklund.com'}Andreas Viklund
+      #main
+        - if session[:user_id]
+          %h2
+            %a{:href => "mailto:#{session[:email]}"}= "#{session[:first_name]} #{session[:last_name]}"
+        - else
+          %h2 You should really login...
+        %img{:src => '/images/dragonmini.png', :width => 125, :height => 125, :alt => "Dragon screenshot"}
+        %p Sometimes, the simple things are the most beautiful. This design was made with simplicity in mind, to make it quick and easy to edit the code and get your website online. The amount of code is very small, and the layout is very basic. No visual effects, no advanced features, just a very simple template.
+        %p This is an example of rails metal using rack middleware.  The middleware itself was written in Sinatra.  Rack is awesome.
+
+        = yield
+
+      #footer
+

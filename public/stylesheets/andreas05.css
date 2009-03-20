@@ -1,0 +1,106 @@
+/* andreas05 - an open source xhtml/css website layout by Andreas Viklund (http://andreasviklund.com). Made for OSWD.org, free to use as-is for any purpose as long as the proper credits are given for the original design work. More free templates are available at: http://oswd.org/userinfo.phtml?user=Andreas
+Version: 1.0, September 27, 2005 */
+
+body{
+padding:0;
+margin:0;
+font:76% verdana,tahoma,sans-serif;
+background:#cccccc url(/images/bodybg.gif) repeat;
+color:#303030;
+}
+
+a{
+text-decoration:none;
+background-color:inherit;
+font-weight:bold;
+color:#286ea0;
+}
+
+a:hover{
+background-color:inherit;
+color:#303030;
+}
+
+h1{
+margin:0;
+font-size:3.6em;
+letter-spacing:-2px;
+text-align:right;
+background-color:inherit;
+color:#505050;
+}
+
+h2{
+margin:5px 0 10px 0;
+font-size:1.6em;
+letter-spacing:-1px;
+font-weight:normal;
+}
+
+p{
+margin:0 0 15px 0;
+line-height:1.3em;
+}
+
+img{
+float:left;
+margin:0 10px 8px 0;
+}
+
+#title{
+margin:20px auto -9px auto;
+width:700px;
+}
+
+#container{
+margin:0 auto 15px auto;
+width:700px;
+padding:10px;
+background:#ffffff url(/images/front.png) bottom left no-repeat;
+color:#303030;
+border:20px solid #505050;
+}
+
+#sidebar{
+float:left;
+width:110px;
+padding-left:175px; 
+}
+
+#main{
+width:385px;
+float:right;
+}
+
+#footer{
+clear:both;
+}
+
+.menu{
+display:block;
+width:110px;
+padding:4px 2px 4px 10px;
+font-size:1.1em;
+font-weight:bold;
+background-color:inherit;
+color:#286ea0;
+border:1px solid #ffffff;
+}
+
+.menu:hover{
+background-color:#f8f8f8;
+color:#286ea0;
+border:1px solid #dadada;
+}
+
+.credits{
+margin-bottom:0;
+font-size:0.8em;
+background-color:inherit;
+color:#aaaaaa;
+}
+
+.credits a{
+background-color:inherit;
+color:#aaaaaa;
+}
