@@ -18,12 +18,13 @@ require 'dm-sweatshop'
 
 include Webrat::Matchers
 
-World do
+module MyWorldHelpers
   def sso_server
     @sso_server ||= 'http://hancock.atmos.org/sso'
   end
   def browser
     @browser ||= Watir::Safari.new
   end
-  #@browser.goto("http://localhost:3000/sso/logout")
 end
+
+World(MyWorldHelpers)

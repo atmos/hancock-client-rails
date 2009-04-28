@@ -51,6 +51,7 @@ And /^click Am I Done Yet\?$/ do
 end
 
 Then /^I should be redirected back to the consumer application$/ do
+  sleep 2
   true
 end
 
